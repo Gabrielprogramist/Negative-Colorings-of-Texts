@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡️</text></svg>"/>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+<style>
+body {
+  background: #000 url('') center center fixed;
+  background-size: cover;
+  color: #0ff;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #0ff;
+  border-radius: 10px;
+  background-color: rgba(17, 17, 17, 0.75);
+}
+
+
+
+h3 {
+  text-shadow: 0 0 1px #0ff, 0 0 1px #0ff, 0 0 1px #0ff, 0 0 1px #0ff;
+}
+
+
+
+nav {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+p {
+  color: #d7cece;
+  line-height: 1.6;
+}
+
+.team {
+  display: flex;
+  justify-content: space-between;
+}
+
+.member {
+  flex: 1;
+  margin: 10px;
+  padding: 20px;
+  background-color: #135b71;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.member h2 {
+  color: #d7cece;
+}
+
+.member p {
+  color: #d7cece;
+}
+.member img {
+  width: 100px;  /* Устанавливает ширину изображения */
+  height: 100px; /* Устанавливает высоту изображения */
+  border-radius: 50%; /* Делает изображение круглым */
+  object-fit: cover; /* Обрезает изображение, чтобы оно заполнило контейнер без искажений */
+  margin-bottom: 10px; /* Добавляет немного пространства под изображением */
+}
+
+</style>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'article' %}">Article</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h3 class="container">About the Project</h3>
+        <p>This project is about analyzing and classifying the negative colorings of texts and their influence on people...</p>
+        
+        <div class="team">
+            <div class="member">
+                <h3>Sekenov Gabit</h3>
+                <img src="{% static 'images/member1.jpg' %}" alt="Gabit">
+                <p>ML, Backend Developer, Researcher, Teamlead</p>
+            </div>
+            <div class="member">
+                <h3>Naukenova Dariga</h3>
+                <img src="{% static 'images/member2.jpg' %}" alt="Dariga">
+                <p>Researcher, Designer, Data Analyst</p>
+            </div>
+            <div class="member">
+                <h3>Kazhenov Yerassyl</h3>
+                <img src="{% static 'images/member3.jpg' %}" alt="Yerassyl">
+                <p>Frontend Developer, Researcher, Data Analyst</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

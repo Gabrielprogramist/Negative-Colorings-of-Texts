@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article</title>
+    <link rel="stylesheet" href="{% static "css/style1.css"%}">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>"/>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'article' %}">Article</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h3 class="container">Negative colorings of texts: analysis and influence on people</h3>
+        <p> <h4>Development of a model and interface for Determining the Tone of a Negative Text</h4>
+            This study's practical component focused on building and implementing a model for identifying negative tonality in texts. The model was created using a neural network and was trained on a sensitive topics dataset.
+            
+            <h4>Data and Training</h4>
+            
+            The dataset used contained Russian sentences tagged for the presence of sensitive topics. These topics included real crime, online crime, drugs, gambling, pornography, prostitution, slavery, suicide, terrorism, weapons, body shaming, health shaming, politics, racism, religion, sexual minorities, sexism, and social injustice. The dataset was divided into training, validation, and test subsets in an 80:10:10 proportion. <br>
+            
+            We used this dataset to train a neural network to classify the text based on these sensitive topics. This was done through a Python notebook, ``Training.ipynb``, where the model was exposed to multiple instances of sentences labeled with the corresponding sensitive topics. The aim of this was to teach the model to identify the sentiment or tonality associated with each of these topics in an isolated text. <br>
+            
+            <h4>Model Implementation and Web Interface </h4>
+            
+            Once the neural network was trained, we used the model to implement a web-based platform for classifying the tonality of texts. This platform was built using the Django framework, a high-level Python web framework that enables rapid development and clean, pragmatic design. The interface of the platform was designed using CSS and JavaScript for clarity and ease of use. <br>
+            
+            The website we developed is capable of accepting a text input and returning the identified negative tonality. This was achieved by integrating the trained model into the Django framework and feeding the user inputted text to the model for classification. The classified tonality is then returned to the user as output. <br>
+            Model was taken from the Transformer API because it is faster to implement..  <br>
+            The model and its implementation can be found on the transformers API as [Skoltech/russian-sensitive-topics](https://huggingface.co/Skoltech/russian-sensitive-topics).  <br>
+            All the code to train the dataset and the model can be seen on the GitHub(https://github.com/s-nlp/inappropriate-sensitive-topics) <br>
+            The dataset can be found at Kaggle(https://www.kaggle.com/datasets/nigula/russian-sensitive-topics) <br>
+            
+            <h4>Conclusion</h4>
+            
+            This practical aspect of the study allowed us to concretize our theoretical understanding of the negative coloring of texts. By using machine learning techniques and web development tools, we were able to create a usable platform that accurately identifies the tonality of a text. This not only proved the validity of our theoretical studies but also provided a tool that can be used in various applications such as public opinion analysis, user feedback analysis, and trend identification, among others. The website we developed contributes to raising awareness of the impact of negative connotations in texts, and it could serve as a tool for promoting more responsible and ethical use of language in various discourse fields.
+            </p>
+    </div>
+</body>
+</html>
