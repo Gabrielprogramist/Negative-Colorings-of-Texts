@@ -1,0 +1,132 @@
+body {
+  background: #000 url('') center center fixed;
+  background-size: cover;
+  color: #0ff;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #0ff;
+  border-radius: 10px;
+  background-color: rgba(17, 17, 17, 0.75);
+}
+
+
+table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+input[type="submit"] {
+  background-color: #000;
+  color: #0ff;
+  border: 1px solid #0ff;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+
+input[type="submit"]:hover {
+  box-shadow: 0 0 5px #0ff, 0 0 25px #0ff, 0 0 50px #0ff, 0 0 100px #0ff;
+}
+
+#classification-results {
+  margin-top: 20px;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+}
+
+#loading {
+  color: #f00;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Glowing Text */
+h3 {
+  text-shadow: 0 0 1px #0ff, 0 0 1px #0ff, 0 0 1px #0ff, 0 0 1px #0ff;
+}
+
+#lol {
+  text-shadow: 0 0 1px #0ff, 0 0 1px #0ff, 0 0 1px #0ff, 0 0 1px #0ff;
+}
+/* Animated Icon */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png');
+  animation: spin 5s linear infinite;
+}
+nav {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+h1 {
+  color: #333;
+}
+
+p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.team {
+  display: flex;
+  justify-content: space-between;
+}
+
+.member {
+  flex: 1;
+  margin: 10px;
+  padding: 20px;
+  background-color: #135b71;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.member h2 {
+  color: #333;
+}
+
+.member p {
+  color: #666;
+}
+.member img {
+  width: 100px;  /* Устанавливает ширину изображения */
+  height: 100px; /* Устанавливает высоту изображения */
+  border-radius: 50%; /* Делает изображение круглым */
+  object-fit: cover; /* Обрезает изображение, чтобы оно заполнило контейнер без искажений */
+  margin-bottom: 10px; /* Добавляет немного пространства под изображением */
+}
